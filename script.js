@@ -10,15 +10,7 @@ document.querySelector('.reload-buttonaa').addEventListener('animationend', func
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DEBUG: Script is running...");
 
-    // List of official Helios URLs
-    const officialUrls = [
-        "https://helios-browser.vercel.app/",
-        "https://helios-blue.vercel.app/",
-        "https://helios-browser.rf.gd",
-        "https://helios-browser.w3spaces.com/",
-        "https://helios-browser.pages.dev/",
-        "https://helios-browser.ct.ws"
-    ];
+
 
     function normalizeUrl(url) {
         return url.split("#")[0].split("?")[0]; // Remove hash and query params
@@ -63,17 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const pageUrl = normalizeUrl(window.location.href);
             console.log("DEBUG: Current Page URL:", pageUrl);
 
-            // Set the verification message
-            if (officialUrls.includes(pageUrl)) {
-                console.log("DEBUG: Official Helios URL detected.");
-                iconElement.classList.add("fa", "fa-circle-check", "sitechecker-secure");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is a secure, official Helios Browser link.`;
-            } else {
-                console.log("DEBUG: UNOFFICIAL URL detected!");
-                iconElement.classList.add("fa", "fa-triangle-exclamation", "sitechecker-warning");
-                messageElement.innerHTML = `This link <b>(${pageUrl})</b> is not an official Helios Browser link. Use at your own risk, or find a list of official Helios Browser links <a href="https://github.com/dinguschan-owo/Helios/blob/main/README.md" target="_blank" class="sitechecker-link">here</a>.`;
-            }
-
+            
             console.log("DEBUG: Text updated inside Sitechecker box.");
         }, 200); 
     }
@@ -105,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 (function () {
     document.addEventListener("DOMContentLoaded", function () {
-        console.log("Logging: Helios started");
+        console.log("Logging: william's browser started");
         displayHeliosStarted();
 
         document.body.addEventListener("click", function (event) {
